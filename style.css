@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background-color: rgb(237,238,197);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wall {
+    position: absolute;
+    width: 130vw;
+    height: 50vh;
+    background-color: rgb(6,8,228);
+    z-index: -1;
+    bottom: 0;
+    animation: moveWall 6s ease-in-out infinite ;
+    filter: blur(30px);
+}
+@keyframes moveWall {
+    0% {
+        bottom: 55vh;
+    }
+    50% {
+        bottom: -10vh;
+    }
+    100% {
+        bottom: 55vh;
+     }
+}
+
+.container {
+    position: absolute;
+    width: 800px;
+    height: 800px;
+    /* background-color: aliceblue; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+
+@font-face {
+    font-family: 'font';
+    src: url(./NewFontVF.ttf);
+}
+.font {
+font-family: 'font';
+font-size: 300px;
+animation: moveText 6s ease-in-out infinite ;
+}
+
+@keyframes moveText {
+    0% {
+        font-weight: 10;
+        margin: -46px;
+        line-height: 240px;
+    }
+    50% {
+        font-weight: 200;
+        margin: -28px;
+        line-height: 211px;
+    }
+    100% {
+        font-weight: 10;
+        margin: -46px;
+        line-height: 240px;
+    }
+}
+.row2 .font {
+    animation-delay: 0.75s; /* 2초 지연 */
+}
+.row3 .font {
+    animation-delay: 1.5s; /* 2초 지연 */
+}
+.row4 .font {
+    animation-delay: 2.25s; /* 2초 지연 */
+}
+.row5 .font {
+    animation-delay: 3s; /* 2초 지연 */
+}
